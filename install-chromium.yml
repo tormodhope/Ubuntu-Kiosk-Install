@@ -1,4 +1,5 @@
 ---
+- name: install chromium
 hosts: localhost
 become: true
 tasks:
