@@ -3,15 +3,7 @@
     hosts: localhost
     become: true
     tasks:
-      - name: add ppa repository
-        apt_repository:
-          repo: 'ppa:canonical-chromium-builds/stage'
-          state: present
-        become: yes
-        become_user: root
       - name: install chromium
-        apt:
-          name: chromium-browser
+        community.general.snap:
+          name: chromium
           state: present
-        become: yes
-        become_user: root
