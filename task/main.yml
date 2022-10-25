@@ -1,0 +1,11 @@
+- name: apt-get update
+  ansible.builtin.apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Installs chrome
+  import_tasks: install-chrome.yml
+
+- name: Installs chromium
+  import_tasks: install-chromium.yml
+
